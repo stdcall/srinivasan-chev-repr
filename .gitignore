@@ -1,0 +1,7 @@
+build/
+.venv/
+__pycache__/
+*.pyc
+.lake/
+tinymist.lock
+.DS_Store

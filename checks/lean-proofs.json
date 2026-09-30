@@ -1,0 +1,16 @@
+[
+  {
+    "file": "checks/lean/Srinivasan/BruhatUniqueness.lean",
+    "declarations": ["Srinivasan.bruhat_factor_unique"],
+    "book": "Chapter I, refinement of the Bruhat decomposition: uniqueness of factors h w k, with h in a subgroup H and k in a subgroup K, under the intersection hypothesis that h in H and w⁻¹ h w in K imply h = 1. This is the group-theoretic cancellation step for the corrected choice of the restricted unipotent factor on the left.",
+    "limitations": "Existence of the decomposition, the structural intersection hypothesis for root subgroups, uniqueness of the Weyl element, and decomposition of the Borel factor into torus and unipotent factors are not formalized. The theorem is valid for arbitrary groups satisfying the stated intersection hypothesis.",
+    "passages": ["passage:bruhat-refinement"]
+  },
+  {
+    "file": "checks/lean/Srinivasan/LangFibres.lean",
+    "declarations": ["Srinivasan.lang_fibre_iff"],
+    "book": "Chapter II, first paragraph of the proof of Lang's theorem: x(Fx)⁻¹ = y(Fy)⁻¹ if and only if y⁻¹x is fixed by F. This identifies a nonempty fibre as a right coset of the fixed-point subgroup.",
+    "limitations": "Only the fibre/coset identity for an arbitrary group endomorphism. Finiteness of the fixed-point group, dimension arguments, finiteness of the morphism and surjectivity of the Lang map are not formalized.",
+    "passages": ["passage:lang-finite-fibres"]
+  }
+]

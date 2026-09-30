@@ -1,0 +1,9 @@
+Chevalley
+Deligne
+Lusztig
+Srinivasan
+Frobenius
+cuspidal
+cohomology
+étale
+unipotent
