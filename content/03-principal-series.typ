@@ -16,8 +16,8 @@ pullback of $lambda$ to $B_0^F = T_0^F U_0^F$. We induce $tilde(lambda)$ to
 $G^F$ and obtain a representation of $G^F$ denoted by
 $Ind_(B_0^F)^(G^F)(tilde(lambda))$. The irreducible constituents of the
 $Ind_(B_0^F)^(G^F)(tilde(lambda))$, where $lambda$ varies over $hat(T)_0^F$, are
-called the principal series representations (or characters) of $G^F$.
-#term-entry("Principal series")
+called the principal series#term-entry("Principal series") representations (or
+characters) of $G^F$.
 
 We now recall Mackey's Theorem (see eg.~@bib:Feit1967, p.~51, or
 @bib:Serre1977a, p.~59).
@@ -37,8 +37,8 @@ We now recall Mackey's Theorem (see eg.~@bib:Feit1967, p.~51, or
 #definition[
   $lambda in hat(T)_0^F$ is _regular_ if it is not fixed by any non-trivial
   element of $W(T_0)^F$.
-  #term-entry("Regular character")
-]
+  #term-entry("Regular character", target: <def:regular-character>)
+] <def:regular-character>
 
 #proposition[
   #enum(

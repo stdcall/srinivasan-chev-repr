@@ -47,6 +47,8 @@ and must be documented in `config/lint.json`.
 Index entries come only from invisible inline marks such as
 `term#term-entry("Term")`. Optional arguments are `sub`, `sort`, `see`,
 and `see-also`. `#index-entries` generates entries and linked locators.
+For an entry about a heading or statement, set `target: <its-label>` so
+the locator leads to the object's beginning and uses its page number.
 Do not maintain a second handwritten list of index entries.
 
 Confirmed corrections belong in `corrections.json`: printed page and

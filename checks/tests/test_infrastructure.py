@@ -4,18 +4,77 @@ import sys
 import subprocess
 import tempfile
 import unittest
+import fitz
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import Fit, NullObject
-from build import normalize_outline_destinations, page_label_problems
+from build import (normalize_outline_destinations, normalize_outlines,
+                   page_label_problems)
 from check_indexes import index_checks
 from check_links import check_links
 from project import settings, stage, editor_settings
 
 
 class Infrastructure(unittest.TestCase):
+    def test_index_targets_show_heading_and_statement_openings(self):
+        driver = '''#import "/content/book-style.typ": book-style
+#import "/content/main-defs.typ": *
+#import "/content/statements.typ": *
+#show: book-style
+#set page(width: 300pt, height: 400pt, margin: 20pt)
+#chapter[Test] <ch:test>
+#heading(level: 3, numbering: none)[Base change] <ss:base-change>
+#term-entry("Base change", target: <ss:base-change>)
+An inline term#term-entry("Inline term") is marked in this paragraph.
+#theorem[
+  #lorem(220)
+  Closing the result.
+  #term-entry("Result", target: <th:result>)
+] <th:result>
+#heading(level: 3, numbering: none)[
+  A wrapped heading for the cohomology base change formula
+] <ss:wrapped-heading>
+#term-entry("Wrapped heading", target: <ss:wrapped-heading>)
+#pagebreak()
+#index-entries
+'''
+        expression = ('query(metadata).map(it => it.value).filter(v => '
+            'type(v) == dictionary and v.at("kind", default: none) '
+            '== "cross-reference")')
+        common = ['--root', str(ROOT), '--font-path',
+                  str(ROOT / 'assets/fonts')]
+        with tempfile.TemporaryDirectory() as tmp:
+            pdf = Path(tmp) / 'index.pdf'
+            query = subprocess.run(['typst', 'eval', *common, expression,
+                '--in', '-', '--format', 'json'], cwd=ROOT, input=driver,
+                text=True, capture_output=True)
+            self.assertEqual(query.returncode, 0, query.stderr)
+            result = subprocess.run(['typst', 'compile', *common, '-',
+                str(pdf)], cwd=ROOT, input=driver, text=True,
+                capture_output=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            references = json.loads(query.stdout)
+            final_pdf = Path(tmp) / 'final.pdf'
+            normalize_outlines(pdf, final_pdf, book=False,
+                               references=references)
+            checked = check_links(final_pdf, references)
+            self.assertEqual(checked['semantic_references_checked'], 4)
+            with fitz.open(final_pdf) as document:
+                for link, text in zip(checked['references'],
+                        ['Base change', 'inline term', 'Theorem',
+                         'A wrapped heading']):
+                    page = document[link['to_page'] - 1]
+                    glyphs = page.search_for(text)[0]
+                    top = link['target_top_origin']
+                    self.assertLessEqual(top, glyphs.y0, text)
+                    self.assertLess(glyphs.y0 - top, 22, text)
+                closing_page = next(i + 1 for i, page in enumerate(document)
+                                    if page.search_for('Closing the result'))
+                result_link = checked['references'][2]
+                self.assertLess(result_link['to_page'], closing_page)
+
     def test_statement_opening_and_first_display_stay_together(self):
         driver = '''#import "/content/book-style.typ": book-style
 #import "/content/main-defs.typ": *

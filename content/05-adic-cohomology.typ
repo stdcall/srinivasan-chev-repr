@@ -15,7 +15,7 @@ classical case and give references to the results in both the $ell$-adic and the
 classical cases.
 
 == Sheaves (Classical theory) <sec:classical-sheaves>
-#term-entry("Sheaf", sub: "classical")
+#term-entry("Sheaf", sub: "classical", target: <sec:classical-sheaves>)
 
 (See @bib:Godement1958, @bib:Hartshorne1977 or @bib:Macdonald1968.)
 
@@ -73,7 +73,12 @@ the category of abelian groups (or sets, rings, etc.). This is the point of view
 which will be useful later.
 
 #heading(level: 3, numbering: none)[Direct and inverse images of sheaves]
-#term-entry("Direct and inverse images of sheaves", sub: "classical")
+<ss:classical-sheaf-images>
+#term-entry(
+  "Direct and inverse images of sheaves",
+  sub: "classical",
+  target: <ss:classical-sheaf-images>,
+)
 
 (@bib:Hartshorne1977, p. 65.)
 
@@ -138,7 +143,8 @@ on $X$ for any sheaf $Phi$ on $X$.
   (@bib:Hartshorne1977, p. 62).
 
 #heading(level: 3, numbering: none)[Sheaf cohomology]
-#term-entry("Sheaf cohomology")
+<ss:classical-sheaf-cohomology>
+#term-entry("Sheaf cohomology", target: <ss:classical-sheaf-cohomology>)
 
 (@bib:Hartshorne1977, pp. 202–208.)
 
@@ -191,7 +197,7 @@ of the presheaf on $Y$ which assigns to any open set $V$ in $Y$ the abelian
 group $H^(i)(f^(-1)(V), Phi|_(f^(-1)(V)))$.
 
 == Schemes <sec:schemes>
-#term-entry("Scheme")
+#term-entry("Scheme", target: <sec:schemes>)
 
 (@bib:Macdonald1968, Ch. 6; @bib:Hartshorne1977, Chapter II; @bib:Mumford1967,
 Ch. 2.)
@@ -284,7 +290,8 @@ _Notation._ If $x in X$, where $X$ is a scheme, the stalk of $cal(O)_X$ at $x$
 is a local ring whose residue field will be denoted by $k(x)$.
 
 #heading(level: 3, numbering: none)[Fibres of a morphism]
-#term-entry("Fibres of a morphism")
+<ss:fibres-of-morphism>
+#term-entry("Fibres of a morphism", target: <ss:fibres-of-morphism>)
 
 Suppose we have a morphism $f: X arrow.r Y$ of schemes and $y in Y$. Then the
 fibre of $f$ over $y$ is defined to be the
@@ -297,9 +304,9 @@ topological space is homeomorphic to $f^(-1)(y)$, the usual fibre over $y$
 fibre of $f$ over $y$ by $X_y$.
 
 #heading(level: 3, numbering: none)[“Points,” geometric points and geometric
-  fibres]
-#term-entry("Point", sub: "geometric")
-#term-entry("Geometric fibres")
+  fibres] <ss:geometric-points-and-fibres>
+#term-entry("Point", sub: "geometric", target: <ss:geometric-points-and-fibres>)
+#term-entry("Geometric fibres", target: <ss:geometric-points-and-fibres>)
 
 If $X_0$ is an affine variety over an algebraically closed field $K$, the points
 of $X_0$ are in bijection with the $K$-homomorphisms of $A = K[X_0]$ into $K$.
@@ -368,7 +375,11 @@ any morphism $X arrow.r Y$ of affine schemes is separated.
 ]
 
 #heading(level: 3, numbering: none)[Functoriality of Sheaf Cohomology]
-#term-entry("Functoriality of cohomology")
+<ss:classical-cohomology-functoriality>
+#term-entry(
+  "Functoriality of cohomology",
+  target: <ss:classical-cohomology-functoriality>,
+)
 
 Let $X$ be a scheme, $Phi$ a sheaf of abelian groups on $X$. Regarding $Phi$ as
 a sheaf on the underlying (Zariski) topological space of $X$, we can form the
@@ -415,7 +426,7 @@ separated and of finite type over an algebraically closed field $K$._ We can
 think of such a scheme as obtained by gluing together a finite number of affine
 schemes of the form $"Spec" A$ where $A$ is a finitely generated $K$-algebra.
 
-#term-entry("Étale morphism")
+#term-entry("Étale morphism", target: <def:etale-morphism>)
 
 We introduce the concept of an étale morphism. Let $f: X arrow.r Y$ be a
 morphism of schemes. Then we have a morphism of sheaves
@@ -428,7 +439,7 @@ of stalks $cal(O)_(Y,f(x)) arrow.r cal(O)_(X,x)$ which is a map of local rings.
   $cal(O)_(Y,y) arrow.r cal(O)_(X,x)$ gives rise to an isomorphism of the
   completions (with respect to their maximal ideals)
   $tilde(cal(O))_(Y,y) arrow.r tilde(cal(O))_(X,x)$.
-]
+] <def:etale-morphism>
 
 Roughly, an étale morphism is analogous to a local homeomorphism for analytic
 spaces over $CC$.
@@ -469,7 +480,11 @@ $H^(i)(X, Phi)$ is the _étale cohomology group_ of $X$ with coefficients in the
 sheaf $Phi$.
 
 #heading(level: 3, numbering: none)[Cohomology with compact support]
-#term-entry("Cohomology with compact support")
+<ss:compact-support-cohomology>
+#term-entry(
+  "Cohomology with compact support",
+  target: <ss:compact-support-cohomology>,
+)
 
 (@bib:Deligne1977, p. 47.)
 
@@ -494,7 +509,12 @@ $X$ with coefficients in $Phi$. It is a deep theorem that these groups are
 independent of the choice of $tilde(X)$.
 
 #heading(level: 3, numbering: none)[Direct and inverse images of sheaves]
-#term-entry("Direct and inverse images of sheaves", sub: "étale")
+<ss:etale-sheaf-images>
+#term-entry(
+  "Direct and inverse images of sheaves",
+  sub: "étale",
+  target: <ss:etale-sheaf-images>,
+)
 
 (See @bib:Deligne1977, pp. 22, 49.)
 
@@ -559,7 +579,12 @@ surjective morphism $f: Y arrow.r X$.
   of an open set and a closed set.)
 ]
 
-#term-entry("Sheaf", sub: "ℓ-adic", sub-display: [$ell$-adic])
+#term-entry(
+  "Sheaf",
+  sub: "ℓ-adic",
+  sub-display: [$ell$-adic],
+  target: <def:adic-sheaf>,
+)
 
 We now define an $ell$-adic sheaf on $X$, and note that it is _not_ a sheaf on
 $X$ in the sense that we have defined earlier.
@@ -570,7 +595,7 @@ $X$ in the sense that we have defined earlier.
   $ZZ/(ell^(n+1) ZZ)$-modules such that the morphisms $Phi_n arrow.r Phi_(n-1)$
   factor through an isomorphism as in the commutative diagram below.
   #align(center, adic-transition())
-]
+] <def:adic-sheaf>
 
 The stalk $Phi_(overline(x))$ of a $ZZ_ell$-sheaf $Phi$ on $X$ at a geometric
 point $overline(x)$ of $X$ is defined to be the $ZZ_ell$-module
@@ -666,7 +691,8 @@ the torsion sheaves $ZZ/(ell^n ZZ)$, taking inverse limits and tensoring with
 $QQ_ell$ we get the corresponding statements for the $H_c^(i)(X, QQ_ell)$.
 
 #heading(level: 3, numbering: none)[Base change]
-#term-entry("Base change")
+<ss:base-change>
+#term-entry("Base change", target: <ss:base-change>)
 
 (@bib:Deligne1977, p. 49; @bib:Artin1972, XII, §5.)
 
@@ -713,8 +739,11 @@ $QQ_ell$.
 
 #source(60)
 #heading(level: 3, numbering: none)[Leray Spectral Sequence and Grothendieck
-  Spectral Sequence]
-#term-entry("Spectral sequences of Leray and Grothendieck")
+  Spectral Sequence] <ss:cohomology-spectral-sequences>
+#term-entry(
+  "Spectral sequences of Leray and Grothendieck",
+  target: <ss:cohomology-spectral-sequences>,
+)
 
 (@bib:Deligne1977, p. 23; @bib:Artin1972, XVII, 5.1.8.1.)
 
@@ -760,7 +789,11 @@ morphism of $AA^d$, the induced action on $H_c^(i)(AA^d, QQ_ell)$ is
 multiplication by $q^d$.
 
 #heading(level: 3, numbering: none)[Functoriality of cohomology groups]
-#term-entry("Functoriality of cohomology")
+<ss:compact-cohomology-functoriality>
+#term-entry(
+  "Functoriality of cohomology",
+  target: <ss:compact-cohomology-functoriality>,
+)
 
 Suppose we have a morphism $f: X arrow.r Y$ of schemes and $Phi$ is a sheaf on
 $Y$. As in the case of classical sheaf cohomology, we have an induced morphism
@@ -796,7 +829,8 @@ an example, see Theorem @th:springer-weyl-representation, Chapter
 @ch:characters.)
 
 #heading(level: 3, numbering: none)[Long exact sequence]
-#term-entry("Long exact sequence")
+<ss:cohomology-long-exact-sequence>
+#term-entry("Long exact sequence", target: <ss:cohomology-long-exact-sequence>)
 
 (@bib:Artin1972, XVII, p. 350, 5.1.16.3.)
 
@@ -818,7 +852,8 @@ $
 $ <eq:cohomology-open-closed-exact-sequence>
 
 #heading(level: 3, numbering: none)[Künneth formula]
-#term-entry("Künneth Formula")
+<ss:cohomology-kunneth-formula>
+#term-entry("Künneth Formula", target: <ss:cohomology-kunneth-formula>)
 
 (@bib:Artin1972, XVII, p. 368, 5.4.3.)
 
@@ -922,7 +957,8 @@ $
 ] <th:cohomology-comparison>
 
 #heading(level: 3, numbering: none)[The Frobenius morphism]
-#term-entry("Frobenius morphism")
+<ss:cohomology-frobenius-morphism>
+#term-entry("Frobenius morphism", target: <ss:cohomology-frobenius-morphism>)
 
 (@bib:Tate1965, p. 100; @bib:Deligne1977, pp. 79, 80.)
 
@@ -968,7 +1004,10 @@ We now state the important fixed point formula of Grothendieck (see
 @bib:Deligne1977, p. 86, Theorem 3.2; @bib:Serre1975, §1;
 @bib:Grothendieck1966).
 
-#term-entry("Trace formula of Grothendieck")
+#term-entry(
+  "Trace formula of Grothendieck",
+  target: <th:grothendieck-trace-formula>,
+)
 
 #theorem(title: [Trace Formula])[
   $ |X^F| = sum_(i >= 0) (-1)^i "Tr"(F, H_c^(i)(X, QQ_ell)). $

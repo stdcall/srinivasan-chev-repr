@@ -25,6 +25,7 @@ in all cases, i.e., also in the case of the exceptional groups (see
 #definition[
   An irreducible representation of $G^F$ is _unipotent_#term-entry(
     "Unipotent representation",
+    target: <def:unipotent-representation>,
   ) if it occurs as a constituent of $R_T^(G)(1)$ for some $F$-stable maximal
   torus $T$ of $G$.
 ] <def:unipotent-representation>
@@ -412,7 +413,7 @@ a dual group of $G$, which is also related to Langlands's notion of an
 $L$-group.
 
 #heading(level: 2, numbering: none)[Dual group] <sec:dual-group>
-#term-entry("Dual group")
+#term-entry("Dual group", target: <sec:dual-group>)
 
 See [@bib:Lusztig1977a], §7. Let $G, F$ be as usual, and $T$ an $F$-stable
 maximal torus. Recall from Chapter~@ch:lusztig-deligne that
@@ -495,7 +496,7 @@ also called Hecke algebras in the literature. #source(154)
 
 #heading(level: 2, numbering: none)[Centralizer
   algebras] <sec:centralizer-algebras>
-#term-entry("Centralizer algebras")
+#term-entry("Centralizer algebras", target: <sec:centralizer-algebras>)
 
 References for this section are [@bib:Curtis1979], §3; [@bib:Curtis1972];
 [@bib:Lusztig1975], §5; [@bib:Lusztig1977a], §5; and [@bib:Bourbaki1968],
