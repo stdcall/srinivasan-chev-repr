@@ -1,3 +1,5 @@
+#import "numbering.typ": numbered-record
+
 // Invisible marks are the sole source of index entries and page locators.
 #let term-entry(
   term,
@@ -7,6 +9,7 @@
   sub-display: none,
   see: none,
   see-also: none,
+  target: none,
 ) = {
   [#metadata((
     kind: "index-mark",
@@ -16,26 +19,39 @@
     sub-display: sub-display,
     see: see,
     see-also: see-also,
+    target: target,
   ))<index-mark>]
 }
 #let locator(location) = box(context {
+  let destination = location.position()
+  // Keep the complete opening line below the viewer's upper edge.
+  destination.y = calc.max(0pt, destination.y - 4pt)
+  let page-number = str(counter(page).at(location).first())
   metadata((
     kind: "cross-reference",
     target: "index-mark",
     resolved: true,
     position: here().position(),
-    target-position: location.position(),
+    target-position: destination,
+    description: "Page " + page-number,
   ))
-  link(location, str(counter(page).at(location).first()))
+  link(destination, page-number)
 })
 #let index-entries = context {
   let entries = (:)
   for mark in query(<index-mark>) {
     let key = mark.value.path.join("\u{1f}")
     let entry = entries.at(key, default: (value: mark.value, locations: ()))
-    let page-number = counter(page).at(mark.location()).first()
+    let location = if mark.value.target == none { mark.location() } else {
+      let element = query(mark.value.target).first()
+      let record = numbered-record(mark.value.target)
+      if element.func() != heading and record != none {
+        record.location()
+      } else { element.location() }
+    }
+    let page-number = counter(page).at(location).first()
     if entry.locations.all(l => counter(page).at(l).first() != page-number) {
-      entry.locations.push(mark.location())
+      entry.locations.push(location)
     }
     entries.insert(key, entry)
   }

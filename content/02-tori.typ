@@ -37,13 +37,14 @@ can be shown that $V^phi subset A_0$ is an $bb(F)_q$-space of dimension equal to
 $dim V$, and so $a = sum a_i lambda_i$ with $a_i in A_0$, $lambda_i in K$.
 
 Since $F$ is an algebra homomorphism of $A$ we have a morphism $F: X -> X$ of
-which $F: A -> A$ is the comorphism. We call $F$ the Frobenius morphism of $X$
-associated with the $bb(F)_q$-rational structure on $X$. #term-entry(
+which $F: A -> A$ is the comorphism. We call $F$ the Frobenius
+morphism#term-entry(
   "Frobenius morphism",
-) In fact, since we are regarding $X$ as being embedded in $K^n$ for some $n$,
-we can think of $F$ as just the restriction to $X$ of the standard Frobenius map
-of $K^n$ which takes each "coordinate" $x_i$ to $x_i^q$. In particular, the set
-$X^F$ of fixed points of $X$ under $F$ is finite.
+) of $X$ associated with the $bb(F)_q$-rational structure on $X$. In fact, since
+we are regarding $X$ as being embedded in $K^n$ for some $n$, we can think of
+$F$ as just the restriction to $X$ of the standard Frobenius map of $K^n$ which
+takes each "coordinate" $x_i$ to $x_i^q$. In particular, the set $X^F$ of fixed
+points of $X$ under $F$ is finite.
 
 #proposition[
   If $g: X -> X$ is an automorphism of $X$ of finite order which commutes with
@@ -104,7 +105,7 @@ We now state Lang's Theorem.
   If $G$ is a connected linear algebraic group defined over $bb(F)_q$ and $F$ is
   the Frobenius map, then the map $phi: x -> x (F x)^(-1)$ of $G$ into $G$ is
   surjective.
-  #term-entry("Lang's Theorem")
+  #term-entry("Lang's Theorem", target: <th:lang>)
 ] <th:lang>
 
 #proof[
@@ -265,7 +266,7 @@ In the same spirit, we prove
       conjugacy classes of tori in $G^F$) are in bijection with the
       $F$-conjugacy classes of $W(T)$.],
   )
-  #term-entry("Classification of tori")
+  #term-entry("Classification of tori", target: <cor:rational-tori>)
 ] <cor:rational-tori>
 
 #proof[
@@ -417,7 +418,7 @@ unipotent if and only if $x$ is a $p$-element.
   cosets of $B_0^F$. Furthermore every element $x$ of $G^F$ can be written
   uniquely as $x = u dot(w) t u'$ for some $w in W^F$, $u in ((U_0)_w^-)^F$,
   $t in T_0^F$, $u' in U_0^F$.
-  #term-entry("Bruhat decomposition")
+  #term-entry("Bruhat decomposition", target: <prop:finite-bruhat>)
 ] <prop:finite-bruhat>
 
 #proof[

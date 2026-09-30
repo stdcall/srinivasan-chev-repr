@@ -25,9 +25,9 @@ The results to be described here are due to Harish-Chandra, and can be found in
   $zeta$ is _cuspidal_ or is in the _discrete series_, if for any $P^F != G^F$,
   $zeta | V^F$ does not contain the trivial representation (or character) of
   $V^F$.
-  #term-entry("Cuspidal representation")
-  #term-entry("Discrete series")
-]
+  #term-entry("Cuspidal representation", target: <def:cuspidal-representation>)
+  #term-entry("Discrete series", target: <def:cuspidal-representation>)
+] <def:cuspidal-representation>
 
 #remark[
   If $G$ is a torus, we define every irreducible representation of $G^F$ to be
@@ -153,7 +153,7 @@ $attach(cal(E), tl: circle.small)(L')$ respectively.
     Ind_(P_2^F)^(G^F)(tilde(psi)_2))_(G^F) = 0$ unless
   $L_1^F = conj(dot(w), L_2^F)$ and $psi_1 = conj(dot(w), psi_2)$ for some
   $w in W^F$ (in particular, unless $P_1, P_2$ are associated).
-  #term-entry("Harish-Chandra's Theorem")
+  #term-entry("Harish-Chandra's Theorem", target: <th:harish-chandra>)
 ] <th:harish-chandra>
 
 #source(39)

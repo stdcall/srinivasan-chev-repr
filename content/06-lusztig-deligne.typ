@@ -37,8 +37,12 @@ ${g U_0 | g in G, g^(-1) (F g) in U_0}$.
 
 Now suppose $T$ is any $F$-stable maximal torus. Let $B = T U$ where the Borel
 subgroup $B$ (and hence $U$) is not necessarily $F$-stable. We define the _Lang
-covering_#term-entry("Lang covering L^-1(U)", display: [Lang covering
-  $L^(-1) (U)$]) $L^(-1) (U)$ of $U$ as follows.
+covering_#term-entry(
+  "Lang covering L^-1(U)",
+  target: <def:lang-covering>,
+  display: [Lang covering
+    $L^(-1) (U)$],
+) $L^(-1) (U)$ of $U$ as follows.
 
 #definition[
   $L^(-1) (U) = {g in G | g^(-1) (F g) in U}$.
@@ -63,6 +67,7 @@ $H_C^(i)(L^(-1) (U), overline(QQ)_ell)$ is $G^F$-stable.
 ] <def:lusztig-deligne-representation>
 #term-entry(
   "Lusztig-Deligne virtual representation R_T^(G)(θ)",
+  target: <def:lusztig-deligne-representation>,
   display: [Lusztig–Deligne virtual representation $R_T^(G)(theta)$],
 )
 
@@ -139,6 +144,7 @@ $H_C^(i)(X, overline(QQ)_ell)$. From now on we will always denote
 $H_C^(i)(X, overline(QQ)_ell)$ by simply $H_C^(i)(X)$ when there is no danger of
 ambiguity. We now define the _Lefschetz number_ #term-entry(
   "Lefschetz number L(g,X)",
+  target: <def:lefschetz-number>,
   display: [Lefschetz number $cal(L) (g, X)$],
 ) $cal(L) (g, X)$ of $g$ as the alternating trace of $g$ on the cohomology of
 $X$.
@@ -412,13 +418,19 @@ it is an integer independent of $theta$.
 #definition(numbered: true)[
   $Q_T^(G)(u) = tr(u, R_T^(G)(1))$.
 ] <def:green-function>
-#term-entry("Green functions Q_T^G", display: [Green functions $Q_T^G$])
+#term-entry(
+  "Green functions Q_T^G",
+  display: [Green functions $Q_T^G$],
+  target: <def:green-function>,
+)
 
 The function $Q_T^G$ on the unipotent elements of $G^F$ is called a _Green
 function_, after Green [@bib:Green1955] who studied them in the case of $GL_n$.
 
-We now prove an important character formula#term-entry("Character formula")
-([@bib:Deligne1976], 4.2). We first state some facts about centralizers of
+We now prove an important character formula#term-entry(
+  "Character formula",
+  target: <th:lusztig-deligne-character-formula>,
+) ([@bib:Deligne1976], 4.2). We first state some facts about centralizers of
 semisimple elements in $G^F$ (see [@bib:Borel1970], E-35, E-38).
 
 Let $s in G^F$, and let $s$ be semisimple. Then $C^(0)(s)$ is a connected
@@ -606,8 +618,10 @@ $Y(T) -> overline(QQ)_ell^*$) of $Y(T)$.
 
 #definition(title: [[@bib:Deligne1976], 5.5])[
   The pairs $(T, theta)$, $(T', theta')$ are said to be _geometrically
-  conjugate_#term-entry("Geometric conjugacy") if either of the two above
-  conditions holds.
+  conjugate_#term-entry(
+    "Geometric conjugacy",
+    target: <def:geometric-conjugacy>,
+  ) if either of the two above conditions holds.
 ] <def:geometric-conjugacy>
 
 #example[
@@ -673,8 +687,11 @@ Theorem, as in the proof of Lemma~@lem:fixed-points-quotient.
   $tilde(X), tilde(X)'$ denote the schemes $L^(-1) U$, $L^(-1) U'$ with respect
   to some $U, U'$ chosen such that $T U, T' U'$ are Borel subgroups.]
 ] <th:strong-orthogonality>
-#term-entry("Strong orthogonality (of the R_T^(G)(θ))", display: [Strong
-  orthogonality (of the $R_T^(G)(theta)$)])
+#term-entry(
+  "Strong orthogonality (of the R_T^(G)(θ))",
+  display: [Strong orthogonality (of the $R_T^(G)(theta)$)],
+  target: <th:strong-orthogonality>,
+)
 
 #corollary(title: [[@bib:Deligne1976], p.~136])[
   If $(T, theta)$, $(T', theta')$ are not geometrically conjugate then the
@@ -801,8 +818,11 @@ Theorem, as in the proof of Lemma~@lem:fixed-points-quotient.
   $R_(T')^(G)(theta')$ need not be disjoint) if $T$ and $T'$ are not
   $G^F$-conjugate.
 ] <th:weak-orthogonality>
-#term-entry("Weak orthogonality (of the R_T^(G)(θ))", display: [Weak
-  orthogonality (of the $R_T^(G)(theta)$)])
+#term-entry(
+  "Weak orthogonality (of the R_T^(G)(θ))",
+  display: [Weak orthogonality (of the $R_T^(G)(theta)$)],
+  target: <th:weak-orthogonality>,
+)
 
 #theorem(title: [Orthogonality relations for Green functions;
   [@bib:Deligne1976], Theorem 6.9])[
@@ -815,7 +835,10 @@ Theorem, as in the proof of Lemma~@lem:fixed-points-quotient.
   $
   <eq:green-function-orthogonality>
 ] <th:green-function-orthogonality>
-#term-entry("Orthogonality of Green functions")
+#term-entry(
+  "Orthogonality of Green functions",
+  target: <th:green-function-orthogonality>,
+)
 
 #proof(head: [_Proofs of Theorems_~@th:weak-orthogonality _and_
   @th:green-function-orthogonality.])[
@@ -1257,6 +1280,7 @@ Harish–Chandra theory described in Chapter~@ch:harish-chandra.
 #definition[
   An $F$-stable maximal torus $T$ is _minisotropic_#term-entry(
     "Minisotropic torus",
+    target: <def:minisotropic-torus>,
   ) if it is not contained in any $F$-stable proper parabolic subgroup of $G$.
 ] <def:minisotropic-torus>
 

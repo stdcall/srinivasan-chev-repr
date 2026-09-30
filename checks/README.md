@@ -111,12 +111,12 @@ Chapter VI normalization check used the Chapter VI identity shown here.
 
 | Text | SHA-256 |
 | --- | --- |
-| `content/01-algebraic-groups.typ` | `7b5702d02cf85af8f57a274b8dd1a51ac6df301a7f884ca0defc9721242106c5` |
-| `content/02-tori.typ` | `882c16523ca749eb9518a870100baaac4a8f3459d7755dfb91b0976006b8bb70` |
-| `content/04-harish-chandra.typ` | `f1239768c5f5246ab2cb9e92fdcaeef644779c7517af6f7a5895f0fd7f7468ef` |
-| `content/05-adic-cohomology.typ` | `f899cb89adf48d827f6839cc638ffbafd7325db3a43af6188aca4c306031138b` |
-| `content/06-lusztig-deligne.typ` | `5080412bc868e89abee728115214b31b56a5fa84380faeb08a1c3b9fde9d56ce` |
-| `content/07-characters.typ` | `9d3b6d468ead112da0d5a16dec865b9ead8dd4055ab0e6fa9caff0aa9859292d` |
+| `content/01-algebraic-groups.typ` | `e119a3fcb216100290db9153d788156a5b3833cde8f97a5f938d4a84b875fe11` |
+| `content/02-tori.typ` | `740a30b71acc2b5c7a3724dd0509b3f1a3227ba8d4af6eba38118550c8e36686` |
+| `content/04-harish-chandra.typ` | `6cee4a70e4620adcc44d7f6cb5dcf0810bc1249bf0f60ff351d8ee9eb0593b73` |
+| `content/05-adic-cohomology.typ` | `3529f391e13c11624be18349be60fde49221a1ca6f0b64f8ae7f3d8b96ffcf6d` |
+| `content/06-lusztig-deligne.typ` | `47924145af0fd1ec689fb2736170cff98851c2f5f2bd3024dbe7f48fd7e06a19` |
+| `content/07-characters.typ` | `46487eed175d8ac4b888c16ea1b444e3ce5baa691ff424748773a36c5d324ce9` |
 
 ## Lean
 
@@ -151,6 +151,8 @@ the run to detect a concurrent change.
 
 `just test` runs `tests/test_infrastructure.py`. These tests cover the shared
 numbering series and references, PDF outline destinations preserving zoom,
-chapter and child destination positions, reference line wrapping, statement openings, page sequences, editor/build stage
-agreement, rejection of an empty final index, and the correction-journal
-schema. They do not check the mathematical claims.
+chapter and child destination positions, reference line wrapping, statement
+openings, index targets leaving complete headings and statement openings
+visible, page sequences, editor/build stage agreement, rejection of an
+empty final index, and the correction-journal schema. They do not check
+the mathematical claims.

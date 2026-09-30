@@ -118,9 +118,13 @@ $psi: bb(F)_q -> overline(QQ)_ell^*$.
   $
     S(A, A') = sum_(X in G^F "-orbit of" A') psi ⟨ A, X ⟩.
   $
-  #term-entry("Trigonometric sums S(A,A')", display: [Trigonometric sums
-    $S(A, A')$])
-]
+  #term-entry(
+    "Trigonometric sums S(A,A')",
+    target: <def:trigonometric-sum>,
+    display: [Trigonometric sums
+      $S(A, A')$],
+  )
+] <def:trigonometric-sum>
 
 _Remarks._ Here the action of $G^F$ is by $op("Ad")'$. Note also that since
 $A in frak(g)^F$, $X in frak(g)'^F$, we have $⟨ A, X ⟩ in bb(F)_q$. Also this
@@ -380,8 +384,11 @@ which $bb(F)_q$ acts according to $psi$.
   The sheaf $(R^i pi_! overline(QQ)_ell)_psi$ is the constant sheaf
   $H_c^(i - 2d)(cal(B)_A)(-d)$ on $frak(t)'_0$, for each $i$. The action of $W$
   on $cal(Y)$ gives rise to a representation of $W$ on $H_c^(i)(cal(B)_A)$.
-  #term-entry("Springer representation of W", display: [Springer representation
-    of $W$])
+  #term-entry(
+    "Springer representation of W",
+    display: [Springer representation of $W$],
+    target: <th:springer-weyl-representation>,
+  )
 ] <th:springer-weyl-representation>
 
 #proof[
@@ -450,6 +457,7 @@ the isomorphism $gamma$, also by $r^i$. Then we can prove the following theorem.
     "Trigonometric sums S(A,A')",
     display: [Trigonometric sums $S(A, A')$],
     sub: "cohomological interpretation of",
+    target: <th:springer-trigonometric-sum>,
   )
 ] <th:springer-trigonometric-sum>
 
@@ -1092,7 +1100,7 @@ counting argument in the Tits building of $G^F$.
 ]
 
 We now prove the main theorem.
-#term-entry("Kazhdan's Theorem")
+#term-entry("Kazhdan's Theorem", target: <th:kazhdan-generalized-character>)
 
 #theorem(title: [@bib:Kazhdan1977, p. 278])[
   The class function $X_(G, T, theta)$ on $G^F$ is a virtual (i.e., generalized)
